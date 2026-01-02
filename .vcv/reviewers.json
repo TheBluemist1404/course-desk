@@ -1,0 +1,12 @@
+{
+  "format": 1,
+  "reviewers": [
+    {
+      "id": "user:hoang",
+      "publicKey": "ed25519:MCowBQYDK2VwAyEAMqH3DbaWL9D7utZJRt9R79JHfLfLN1SuHn4O3nyCxsA=",
+      "permissions": [
+        "model:approve"
+      ]
+    }
+  ]
+}

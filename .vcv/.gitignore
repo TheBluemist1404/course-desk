@@ -1,0 +1,5 @@
+# Local, per-checkout VCV state (docs/adr/0007-repository-projects.md). Not shared via Git.
+cache/
+orphaned/
+audit.jsonl
+*.tmp-*

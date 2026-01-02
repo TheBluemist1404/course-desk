@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "bindingId": "impl.cap-list-notifications",
+  "modelObjectId": "cap-list-notifications",
+  "relation": "implements",
+  "locator": {
+    "path": "server/src/notifications/notifications.service.ts",
+    "selector": {
+      "kind": "symbol",
+      "name": "NotificationsService.forRecipient"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "forRecipient() returns a recipient's notifications, oldest first",
+    "confidence": 0.8
+  },
+  "modelRevision": "rev-1",
+  "observed": {
+    "commit": "c0399baea388037284e38bfc1a5ae762964bd3ca",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "13944ed5cca301821d732b3fd1d73efee17b7a06f6a83fe52b018d80dcd028c2",
+      "selector": "1c22b0dbe0f589b63bf3662d839fcd2b0ae572d03e807318fd60b56f927e71f8"
+    }
+  }
+}

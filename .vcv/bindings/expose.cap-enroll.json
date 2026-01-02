@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "bindingId": "expose.cap-enroll",
+  "modelObjectId": "cap-enroll",
+  "relation": "exposes",
+  "locator": {
+    "path": "server/src/enrollment/enrollment.controller.ts",
+    "selector": {
+      "kind": "route",
+      "method": "POST",
+      "route": "/enrollments"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "the HTTP handler for enrollment requests",
+    "confidence": 0.8
+  },
+  "modelRevision": "rev-1",
+  "observed": {
+    "commit": "c0399baea388037284e38bfc1a5ae762964bd3ca",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "70d18225d6dfbd3880dfbc264074872b09ea46aea3a9f795ca5846534a06676f",
+      "selector": "2f238e78ce4bbbe604e996b09768ac9d32fd663a5e57f00eab95a565cc8ee840"
+    }
+  }
+}

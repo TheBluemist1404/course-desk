@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "bindingId": "test.rul-seat-limit",
+  "modelObjectId": "rul-seat-limit",
+  "relation": "tests",
+  "locator": {
+    "path": "server/src/enrollment/enrollment.service.spec.ts",
+    "selector": {
+      "kind": "test",
+      "name": "EnrollmentService > rejects an enrollment into a full course and notifies the student"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "the unit test for a full course",
+    "confidence": 0.8
+  },
+  "modelRevision": "rev-1",
+  "observed": {
+    "commit": "c0399baea388037284e38bfc1a5ae762964bd3ca",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "6bbcbc3ea40902b78791c5da20c7be48ecaf6191cad186338e569156503c0f34",
+      "selector": "e4e2fcbf2e77b4b2ee672441018eb1fbe2e3425bd0bcdd750a83af6546fe74cc"
+    }
+  }
+}

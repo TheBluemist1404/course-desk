@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "bindingId": "impl.rul-seat-limit",
+  "modelObjectId": "rul-seat-limit",
+  "relation": "implements",
+  "locator": {
+    "path": "server/src/enrollment/enrollment.service.ts",
+    "selector": {
+      "kind": "symbol",
+      "name": "EnrollmentService.enroll"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "the capacity check is in enroll()",
+    "confidence": 0.8
+  },
+  "modelRevision": "rev-1",
+  "observed": {
+    "commit": "c0399baea388037284e38bfc1a5ae762964bd3ca",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "e813335c0a59aadca98651b161b1d181797b3ee17f7ddc809cc256082fc52a77",
+      "selector": "d170277f547d0719cd10e62c4dabb3101737036bf4dae857d43f64ed7373ffc8"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "bindingId": "persist.dat-enrollment",
+  "modelObjectId": "dat-enrollment",
+  "relation": "persists",
+  "locator": {
+    "path": "server/src/enrollment/enrollment.types.ts",
+    "selector": {
+      "kind": "symbol",
+      "name": "Enrollment"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "the stored enrollment record",
+    "confidence": 0.8
+  },
+  "modelRevision": "rev-1",
+  "observed": {
+    "commit": "c0399baea388037284e38bfc1a5ae762964bd3ca",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "1b2f48d5e610ea72bbe08e402813ffd2849c23122e301384dbe3f9f16412defe",
+      "selector": "ea14cc46852f381f0b6a60c7492587c7f28823b95e20c914ec5410e6796d78f3"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "bindingId": "persist.dat-notification",
+  "modelObjectId": "dat-notification",
+  "relation": "persists",
+  "locator": {
+    "path": "server/src/notifications/notification.types.ts",
+    "selector": {
+      "kind": "symbol",
+      "name": "Notification"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "the stored notification record",
+    "confidence": 0.8
+  },
+  "modelRevision": "rev-1",
+  "observed": {
+    "commit": "c0399baea388037284e38bfc1a5ae762964bd3ca",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "f9cdb5d639e3fc8abd16117edf4d80578f6574c718d462f93f4e91e5341f6cc8",
+      "selector": "5e909125192f30be515230ea04f2b1c3d2455fe7153c3749443091b557c062ff"
+    }
+  }
+}
