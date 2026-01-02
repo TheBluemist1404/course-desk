@@ -1,0 +1,14 @@
+{
+  "format": 1,
+  "changeId": "chg-baseline",
+  "projectId": "prj-course-desk",
+  "proposalDigest": "529d6eafa13954b4b388d4371f0445af576d5f1f256409f2fd9e6e2e06584b64",
+  "proposerId": "agent:bootstrap",
+  "approverId": "user:hoang",
+  "baseRevision": "rev-1",
+  "resultingRevision": "rev-2-a21d7aa4915e",
+  "publicKey": "ed25519:MCowBQYDK2VwAyEAMqH3DbaWL9D7utZJRt9R79JHfLfLN1SuHn4O3nyCxsA=",
+  "keyFingerprint": "eeb164eea1d2c320",
+  "signedAt": "2026-11-12T09:40:08.090Z",
+  "signature": "nkttZtPtmuV810P6Q9nzxzf19OwJN0agHSl4EQA4nigLNtxuompBUMA2wXeFr7MGncZVQ9ThMQ5lKVzcXebPCg=="
+}
