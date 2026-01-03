@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "bindingId": "test.rejection.e2e",
+  "modelObjectId": "crt-rejection-notified",
+  "relation": "tests",
+  "locator": {
+    "path": "server/test/app.e2e-spec.ts",
+    "selector": {
+      "kind": "test",
+      "name": "Course Desk API (e2e) > confirms, then rejects when full; each student is notified of their outcome"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "over HTTP: the rejected student's notifications are exactly one enrollment-rejected entry",
+    "confidence": 0.9
+  },
+  "modelRevision": "rev-3-bd922e630c6e",
+  "observed": {
+    "commit": "f0cb5e003b7c80427519a58f8890661e367e501a",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "5a52b2a01ec4011dcd1569dfbc7b8feaea9990eab97aba7c150872ba50e5f588",
+      "selector": "8a2b239c235c8cc3d88b0b9086e0c676ef3d8097198e872d13c06be80fe6caef"
+    }
+  }
+}

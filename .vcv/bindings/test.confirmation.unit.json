@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "bindingId": "test.confirmation.unit",
+  "modelObjectId": "crt-confirmation-notified",
+  "relation": "tests",
+  "locator": {
+    "path": "server/src/enrollment/enrollment.service.spec.ts",
+    "selector": {
+      "kind": "test",
+      "name": "EnrollmentService > confirms an enrollment while seats are left and notifies the student"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "asserts the confirmation, the seat, and one enrollment-confirmed notification",
+    "confidence": 0.9
+  },
+  "modelRevision": "rev-3-bd922e630c6e",
+  "observed": {
+    "commit": "f0cb5e003b7c80427519a58f8890661e367e501a",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "6bbcbc3ea40902b78791c5da20c7be48ecaf6191cad186338e569156503c0f34",
+      "selector": "145faac6c57c1be2dd66da6d8033c900baac3ad9218f6979ca385c0c24a40a58"
+    }
+  }
+}

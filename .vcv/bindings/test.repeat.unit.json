@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "bindingId": "test.repeat.unit",
+  "modelObjectId": "crt-repeat-rejected",
+  "relation": "tests",
+  "locator": {
+    "path": "server/src/enrollment/enrollment.service.spec.ts",
+    "selector": {
+      "kind": "test",
+      "name": "EnrollmentService > rejects a repeat enrollment without taking a second seat"
+    }
+  },
+  "provenance": {
+    "source": "agent",
+    "principalId": "agent:bootstrap",
+    "rationale": "asserts ALREADY_ENROLLED and the unchanged seat count",
+    "confidence": 0.9
+  },
+  "modelRevision": "rev-3-bd922e630c6e",
+  "observed": {
+    "commit": "f0cb5e003b7c80427519a58f8890661e367e501a",
+    "workingTree": "clean",
+    "fingerprint": {
+      "algorithm": "vcv-fp-1",
+      "file": "6bbcbc3ea40902b78791c5da20c7be48ecaf6191cad186338e569156503c0f34",
+      "selector": "57004a593b341122f3b912863dcd83594696d24126515b1d2f87b0d161162c25"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format": 1,
+  "changeId": "chg-enrollment-criteria",
+  "projectId": "prj-course-desk",
+  "proposalDigest": "64f174db4e111a7e0eba0d2d98e916d2f25e81fa68017bd42507d1a86b3c8335",
+  "proposerId": "agent:bootstrap",
+  "approverId": "user:hoang",
+  "baseRevision": "rev-2-a21d7aa4915e",
+  "resultingRevision": "rev-3-bd922e630c6e",
+  "publicKey": "ed25519:MCowBQYDK2VwAyEAMqH3DbaWL9D7utZJRt9R79JHfLfLN1SuHn4O3nyCxsA=",
+  "keyFingerprint": "eeb164eea1d2c320",
+  "signedAt": "2026-11-12T09:40:14.125Z",
+  "signature": "PAYyslw/FmRmCgADPBnu77iUltwSYpZxrcaIWC5cWojTwNWHnpXNd+04e1YStbXdq4lN2gDC3IaUDHa2AHZfDg=="
+}

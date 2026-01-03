@@ -1,0 +1,63 @@
+{
+  "changeId": "chg-enrollment-criteria",
+  "projectId": "prj-course-desk",
+  "proposerId": "agent:bootstrap",
+  "baseRevision": "rev-2-a21d7aa4915e",
+  "status": "applied",
+  "validationResults": [],
+  "change": {
+    "changeId": "chg-enrollment-criteria",
+    "projectId": "prj-course-desk",
+    "expectedRevision": "rev-2-a21d7aa4915e",
+    "operations": [
+      {
+        "type": "createCriterion",
+        "criterion": {
+          "id": "crt-rejection-notified",
+          "kind": "criterion",
+          "owner": "mod-enrollment",
+          "name": "A rejected enrollment is announced",
+          "statement": "A request for a full course is recorded as rejected with COURSE_FULL, and the student receives exactly one enrollment-rejected notification for that enrollment.",
+          "verifies": [
+            "rul-announce-every-decision",
+            "rul-seat-limit",
+            "cap-enroll"
+          ],
+          "verification": "required"
+        }
+      },
+      {
+        "type": "createCriterion",
+        "criterion": {
+          "id": "crt-confirmation-notified",
+          "kind": "criterion",
+          "owner": "mod-enrollment",
+          "name": "A confirmed enrollment is announced",
+          "statement": "A request while seats are left is confirmed, takes a seat, and the student receives exactly one enrollment-confirmed notification for that enrollment.",
+          "verifies": [
+            "rul-announce-every-decision",
+            "cap-enroll"
+          ],
+          "verification": "required"
+        }
+      },
+      {
+        "type": "createCriterion",
+        "criterion": {
+          "id": "crt-repeat-rejected",
+          "kind": "criterion",
+          "owner": "mod-enrollment",
+          "name": "A repeat request takes no second seat",
+          "statement": "A student already enrolled in a course is rejected with ALREADY_ENROLLED and no second seat is taken.",
+          "verifies": [
+            "rul-no-double-enroll"
+          ],
+          "verification": "optional"
+        }
+      }
+    ],
+    "rationale": "Make the announcement policy checkable before merge, per decision kind."
+  },
+  "approverId": "user:hoang",
+  "resultingRevision": "rev-3-bd922e630c6e"
+}
