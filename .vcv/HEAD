@@ -1,72 +1,53 @@
 {
   "format": 1,
-  "revision": "rev-3-bd922e630c6e",
+  "revision": "rev-4-d704dd46aee2",
   "history": [
     "rev-1",
     "rev-2-a21d7aa4915e",
-    "rev-3-bd922e630c6e"
+    "rev-3-bd922e630c6e",
+    "rev-4-d704dd46aee2"
   ],
   "lastCommit": {
-    "changeId": "chg-enrollment-criteria",
+    "changeId": "chg-quiet-rejections-2",
     "projectId": "prj-course-desk",
-    "proposerId": "agent:bootstrap",
-    "baseRevision": "rev-2-a21d7aa4915e",
+    "proposerId": "agent:coder",
+    "baseRevision": "rev-3-bd922e630c6e",
     "status": "applied",
     "validationResults": [],
     "change": {
-      "changeId": "chg-enrollment-criteria",
+      "changeId": "chg-quiet-rejections-2",
       "projectId": "prj-course-desk",
-      "expectedRevision": "rev-2-a21d7aa4915e",
+      "expectedRevision": "rev-3-bd922e630c6e",
       "operations": [
         {
-          "type": "createCriterion",
-          "criterion": {
-            "id": "crt-rejection-notified",
-            "kind": "criterion",
-            "owner": "mod-enrollment",
-            "name": "A rejected enrollment is announced",
-            "statement": "A request for a full course is recorded as rejected with COURSE_FULL, and the student receives exactly one enrollment-rejected notification for that enrollment.",
-            "verifies": [
-              "rul-announce-every-decision",
-              "rul-seat-limit",
-              "cap-enroll"
-            ],
-            "verification": "required"
-          }
+          "type": "setRuleStatement",
+          "ruleId": "rul-announce-every-decision",
+          "statement": "Each enrollment decision is recorded; a confirmed decision results in exactly one notification to the student, a rejected one in none."
         },
         {
-          "type": "createCriterion",
-          "criterion": {
-            "id": "crt-confirmation-notified",
-            "kind": "criterion",
-            "owner": "mod-enrollment",
-            "name": "A confirmed enrollment is announced",
-            "statement": "A request while seats are left is confirmed, takes a seat, and the student receives exactly one enrollment-confirmed notification for that enrollment.",
-            "verifies": [
-              "rul-announce-every-decision",
-              "cap-enroll"
-            ],
-            "verification": "required"
-          }
+          "type": "renameObject",
+          "objectId": "rul-announce-every-decision",
+          "name": "Only a confirmed decision is notified"
         },
         {
-          "type": "createCriterion",
-          "criterion": {
-            "id": "crt-repeat-rejected",
-            "kind": "criterion",
-            "owner": "mod-enrollment",
-            "name": "A repeat request takes no second seat",
-            "statement": "A student already enrolled in a course is rejected with ALREADY_ENROLLED and no second seat is taken.",
-            "verifies": [
-              "rul-no-double-enroll"
-            ],
-            "verification": "optional"
-          }
+          "type": "renameObject",
+          "objectId": "crt-rejection-notified",
+          "name": "A rejected enrollment is not announced"
+        },
+        {
+          "type": "reviseCriterion",
+          "criterionId": "crt-rejection-notified",
+          "statement": "A request for a full course is recorded as rejected with COURSE_FULL, and the student receives no notification for it."
+        },
+        {
+          "type": "setDescription",
+          "objectId": "prj-course-desk",
+          "description": "Draft bootstrapped from the repository at commit adb423c; not reviewed. Students enroll in courses; every enrollment decision is recorded, and a confirmed one is announced as a notification. NestJS API (server/, in-memory storage) plus a React page (web/). Based on README.md and the sources."
         }
       ],
-      "rationale": "Make the announcement policy checkable before merge, per decision kind."
+      "rationale": "Product decision - a rejection is shown in the enrollment response; only confirmations are sent as notifications. Replaces chg-quiet-rejections (digest 67831771...ab0a2f), withdrawn before any approval because it left the rule's name and the project description saying every decision is announced."
     },
     "approverId": "user:hoang",
-    "resultingRevision": "rev-3-bd922e630c6e"
+    "resultingRevision": "rev-4-d704dd46aee2"
   }
 }

@@ -25,14 +25,12 @@ describe("EnrollmentService", () => {
     expect(enrollment.courses().find((c) => c.id === "crs-poetry")?.seatsLeft).toBe(0);
   });
 
-  it("rejects an enrollment into a full course and notifies the student", async () => {
+  it("rejects an enrollment into a full course without notifying the student", async () => {
     const { enrollment, notifications } = await setup();
     enrollment.enroll({ studentId: "stu-ada", courseId: "crs-poetry" });
     const e = enrollment.enroll({ studentId: "stu-bob", courseId: "crs-poetry" });
     expect(e).toMatchObject({ status: "rejected", reason: "COURSE_FULL" });
-    expect(notifications.forRecipient("stu-bob")).toEqual([
-      expect.objectContaining({ kind: "enrollment-rejected", enrollmentId: e.id }),
-    ]);
+    expect(notifications.forRecipient("stu-bob")).toEqual([]);
   });
 
   it("rejects a repeat enrollment without taking a second seat", async () => {
