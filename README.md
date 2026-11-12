@@ -1,7 +1,7 @@
 # Course Desk
 
-Students enroll in courses; every enrollment decision is announced to the student as a
-notification.
+Students enroll in courses; every enrollment decision is recorded, and a confirmed one is
+announced to the student as a notification.
 
 - `server/`: NestJS API with in-memory storage.
 - `web/`: React (Vite) single page.
@@ -38,8 +38,8 @@ Two courses are seeded: Linear Algebra (2 seats) and Modern Poetry (1 seat).
 
 1. `stu-ada` enrolls in Modern Poetry: `confirmed`; Modern Poetry has 0 seats left.
 2. `stu-bob` enrolls in Modern Poetry: `rejected` with reason `COURSE_FULL`.
-3. `stu-ada` has one notification (`enrollment-confirmed`), `stu-bob` one
-   (`enrollment-rejected`).
+3. `stu-ada` has one notification (`enrollment-confirmed`); `stu-bob` has none, since the
+   enrollment response already says the request was rejected.
 4. Enrolling again in a course you already hold is `rejected` with `ALREADY_ENROLLED` and does
    not take a seat.
 
