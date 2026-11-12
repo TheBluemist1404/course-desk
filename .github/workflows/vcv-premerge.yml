@@ -79,7 +79,10 @@ jobs:
     # the PR's code runs, and a failed identity read runs no tests.
     needs: identity
     runs-on: ubuntu-latest
-    permissions: {}
+    # Read access for the checkout of a private repository only. The token is passed to the checkout
+    # step, and persist-credentials: false keeps it out of the checkout, so the PR's code never sees it.
+    permissions:
+      contents: read
     steps:
       - name: The PR head (its code runs in THIS job only)
         uses: actions/checkout@v4
