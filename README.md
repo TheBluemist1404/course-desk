@@ -11,7 +11,7 @@ Requires Node 22.22.2 or later (a jsdom requirement of the web tests). There are
 ## Commands
 
 ```sh
-npm ci              # install both workspaces from package-lock.json
+npm ci              # install both workspaces exactly as locked in package-lock.json
 npm run typecheck
 npm test            # server unit + HTTP tests, web component tests (Vitest)
 npm run build       # server → server/dist, web → web/dist
