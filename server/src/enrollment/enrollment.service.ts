@@ -5,7 +5,7 @@ import { EnrollmentRepository } from "./enrollment.repository.js";
 import type { CourseSummary, Enrollment, EnrollmentRequest, RejectionReason } from "./enrollment.types.js";
 
 /**
- * Enrollment rules. Every decision is recorded; only a confirmed one is announced to the student:
+ * Enrollment rules. Each decision is recorded; only a confirmed one is announced to the student:
  * a confirmed enrollment takes a seat; a full course or a repeat request is rejected.
  */
 @Injectable()
