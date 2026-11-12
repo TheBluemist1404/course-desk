@@ -8,7 +8,7 @@ export class NotificationsController {
 
   @Get()
   list(@Query("recipientId") recipientId?: string): Notification[] {
-    if (!recipientId) throw new BadRequestException("recipientId is required");
+    if (!recipientId) throw new BadRequestException("the recipientId query parameter is required");
     return this.notifications.forRecipient(recipientId);
   }
 }
