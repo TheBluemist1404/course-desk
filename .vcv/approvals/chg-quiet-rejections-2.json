@@ -1,0 +1,14 @@
+{
+  "format": 1,
+  "changeId": "chg-quiet-rejections-2",
+  "projectId": "prj-course-desk",
+  "proposalDigest": "d72e03ece0de06a8777c84f6f0ba14ef5bbec8fbdda27115b4fe0b3c602f46c4",
+  "proposerId": "agent:coder",
+  "approverId": "user:hoang",
+  "baseRevision": "rev-3-bd922e630c6e",
+  "resultingRevision": "rev-4-d704dd46aee2",
+  "publicKey": "ed25519:MCowBQYDK2VwAyEAMqH3DbaWL9D7utZJRt9R79JHfLfLN1SuHn4O3nyCxsA=",
+  "keyFingerprint": "eeb164eea1d2c320",
+  "signedAt": "2026-11-12T15:00:37.374Z",
+  "signature": "Q5T7nPoofU0R3y9vgtoB4AZncP1v+DlglACRECo35iixfCRdhN5okH+yHjWtr93M39wY34xL5pVgZnRj/RkoBQ=="
+}

@@ -5,7 +5,7 @@ import { EnrollmentRepository } from "./enrollment.repository.js";
 import type { CourseSummary, Enrollment, EnrollmentRequest, RejectionReason } from "./enrollment.types.js";
 
 /**
- * Enrollment rules. Each decision is recorded and announced to the student:
+ * Enrollment rules. Each decision is recorded; only a confirmed one is announced to the student:
  * a confirmed enrollment takes a seat; a full course or a repeat request is rejected.
  */
 @Injectable()
@@ -39,14 +39,8 @@ export class EnrollmentService {
       ...(reason ? { reason } : {}),
     });
 
-    if (reason) {
-      this.notifications.notify(
-        enrollment.studentId,
-        "enrollment-rejected",
-        enrollment.id,
-        reason === "COURSE_FULL" ? `${course.title} is full; your enrollment was not accepted.` : `You are already enrolled in ${course.title}.`,
-      );
-    } else {
+    // Only confirmations are announced; the response already tells the student about a rejection.
+    if (!reason) {
       this.notifications.notify(enrollment.studentId, "enrollment-confirmed", enrollment.id, `You are enrolled in ${course.title}.`);
     }
     return enrollment;

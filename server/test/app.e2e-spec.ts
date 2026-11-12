@@ -26,7 +26,7 @@ describe("Course Desk API (e2e)", () => {
     ]);
   });
 
-  it("confirms, then rejects when full; each student is notified of their outcome", async () => {
+  it("confirms, then rejects when full; only the confirmed student is notified", async () => {
     const server = app.getHttpServer();
     const first = await request(server).post("/api/enrollments").send({ studentId: "stu-ada", courseId: "crs-poetry" }).expect(201);
     expect(first.body).toEqual({ id: "enr-1", studentId: "stu-ada", courseId: "crs-poetry", status: "confirmed" });
@@ -39,9 +39,7 @@ describe("Course Desk API (e2e)", () => {
     const ada = await request(server).get("/api/notifications").query({ recipientId: "stu-ada" }).expect(200);
     expect(ada.body).toEqual([{ id: "ntf-1", recipientId: "stu-ada", kind: "enrollment-confirmed", enrollmentId: "enr-1", message: "You are enrolled in Modern Poetry." }]);
     const bob = await request(server).get("/api/notifications").query({ recipientId: "stu-bob" }).expect(200);
-    expect(bob.body).toEqual([
-      { id: "ntf-2", recipientId: "stu-bob", kind: "enrollment-rejected", enrollmentId: "enr-2", message: "Modern Poetry is full; your enrollment was not accepted." },
-    ]);
+    expect(bob.body).toEqual([]);
   });
 
   it("answers 400 for an invalid request and 404 for unknown courses or enrollments", async () => {

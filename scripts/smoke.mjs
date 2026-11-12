@@ -45,7 +45,7 @@ try {
   assert.equal(results[1].body.status, "confirmed");
   assert.deepEqual([results[2].body.status, results[2].body.reason], ["rejected", "COURSE_FULL"]);
   assert.equal(results[3].body[0].kind, "enrollment-confirmed");
-  assert.equal(results[4].body[0].kind, "enrollment-rejected");
+  assert.deepEqual(results[4].body, []); // a rejection is not announced
   assert.equal(results[5].body.find((c) => c.id === "crs-poetry").seatsLeft, 0);
   console.log("smoke: ok");
 } finally {

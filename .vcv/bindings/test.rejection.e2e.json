@@ -7,23 +7,22 @@
     "path": "server/test/app.e2e-spec.ts",
     "selector": {
       "kind": "test",
-      "name": "Course Desk API (e2e) > confirms, then rejects when full; each student is notified of their outcome"
+      "name": "Course Desk API (e2e) > confirms, then rejects when full; only the confirmed student is notified"
     }
   },
   "provenance": {
     "source": "agent",
-    "principalId": "agent:bootstrap",
-    "rationale": "over HTTP: the rejected student's notifications are exactly one enrollment-rejected entry",
-    "confidence": 0.9
+    "principalId": "agent:coder",
+    "rationale": "over HTTP: the rejected student has no notifications, per approved rev-4"
   },
-  "modelRevision": "rev-3-bd922e630c6e",
+  "modelRevision": "rev-4-d704dd46aee2",
   "observed": {
-    "commit": "f0cb5e003b7c80427519a58f8890661e367e501a",
+    "commit": "5e5aef789b364a01cef12c1f9d5484418e4b08a3",
     "workingTree": "clean",
     "fingerprint": {
       "algorithm": "vcv-fp-1",
-      "file": "5a52b2a01ec4011dcd1569dfbc7b8feaea9990eab97aba7c150872ba50e5f588",
-      "selector": "8a2b239c235c8cc3d88b0b9086e0c676ef3d8097198e872d13c06be80fe6caef"
+      "file": "a5628baccc128fca30e730052210227386657ee740682755f9c7d1868f829ef6",
+      "selector": "b6cb432c04a151ba64536ee246d36dc20906b75632667411068a5e72643d70cc"
     }
   }
 }
