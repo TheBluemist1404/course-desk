@@ -39,8 +39,14 @@ export class EnrollmentService {
       ...(reason ? { reason } : {}),
     });
 
-    // Only confirmations are announced; the response already tells the student about a rejection.
-    if (!reason) {
+    if (reason) {
+      this.notifications.notify(
+        enrollment.studentId,
+        "enrollment-rejected",
+        enrollment.id,
+        reason === "COURSE_FULL" ? `${course.title} is full; your enrollment was not accepted.` : `You are already enrolled in ${course.title}.`,
+      );
+    } else {
       this.notifications.notify(enrollment.studentId, "enrollment-confirmed", enrollment.id, `You are enrolled in ${course.title}.`);
     }
     return enrollment;
